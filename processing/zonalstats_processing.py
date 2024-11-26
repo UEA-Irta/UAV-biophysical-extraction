@@ -100,7 +100,7 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
                 Calculated vegetation indices based on the specified options.
 
     LST_traits :
-            - Tv : float
+            - Tc : float
                 Temperature of vegetation (K).
             - Trad : float
                 Radiometric temperature (K).
@@ -326,11 +326,11 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
                 values_index = zonal_stats(grid_extract, 'veg_mask.tif', nodata=np.nan, stats=statistic)
                 stats_index = [zone[statistic] for zone in values_index]
                 stats_index_with_offset = [(value + 273.15) if value is not None else None for value in stats_index]
-                grid_dataset[f'Tv_{statistic}'] = stats_index_with_offset
+                grid_dataset[f'Tc_{statistic}'] = stats_index_with_offset
 
             if soil_mask_file is not None and cc_mask_file is not None:
                 warnings.filterwarnings("ignore", message="Column names longer than 10 characters will be truncated")
-                grid_dataset.to_file('Tv.shp')
+                grid_dataset.to_file('Tc.shp')
 
             if soil_mask_file is not None:
                 soil_mask, soil_mask_transform = mask(raster_data, soil_mask_shapes, crop=True, nodata=np.nan)
@@ -339,18 +339,18 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
                     soil_raster.write(soil_mask, 1)
 
                 for statistic in statistics:
-                    values_index = zonal_stats('Tv.shp', 'soil_mask.tif', nodata=np.nan, stats=statistic)
+                    values_index = zonal_stats('Tc.shp', 'soil_mask.tif', nodata=np.nan, stats=statistic)
                     stats_index = [zone[statistic] for zone in values_index]
                     stats_index_with_offset = [(value + 273.15) if value is not None else None for value in stats_index]
                     grid_dataset[f'Ts_{statistic}'] = stats_index_with_offset
 
             if cc_mask_file is not None:
                 warnings.filterwarnings("ignore", message="Column names longer than 10 characters will be truncated")
-                grid_dataset.to_file('Tv_Ts.shp')
+                grid_dataset.to_file('Tc_Ts.shp')
                 if soil_mask_file is not None:
-                    grid_extract = 'Tv_Ts.shp'
+                    grid_extract = 'Tc_Ts.shp'
                 else:
-                    grid_extract = 'Tv.shp'
+                    grid_extract = 'Tc.shp'
 
             if cc_mask_file is not None:
                 cc_mask, cc_mask_transform = mask(raster_data, cc_mask_shapes, crop=True, nodata=np.nan)
@@ -369,10 +369,10 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
 
         os.remove('veg_mask.tif')
         if soil_mask_file is not None and cc_mask_file is not None:
-            os.remove('Tv.shp')
+            os.remove('Tc.shp')
             os.remove('soil_mask.tif')
         if cc_mask_file is not None:
-            os.remove('Tv_Ts.shp')
+            os.remove('Tc_Ts.shp')
             os.remove('cc_mask.tif')
 
         Trad = zonal_stats(grid, temp_file, stats='mean')

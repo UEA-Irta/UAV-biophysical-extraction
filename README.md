@@ -6,7 +6,7 @@ This project generates useful biophysical traits from UAV images to estimate par
 
 1. **Grid Generation**: Generates a grid for each individual tree, enabling a detailed analysis of tree-specific attributes.
 2. **Mask Creation**: Generates masks for different crop types, soil, or canopy cover using RGB or multispectral or height images. It can process both height and multispectral data simultaneously.
-3. **Zonal Statistics**: Extracts data from the generated grids by using multispectral images, height, and temperature data to derive structural traits, vegetation indices (VIs), and temperature-related traits.
+3. **Zonal Statistics**: Extracts data from the generated grids by using multispectral, height, and temperature images to derive structural traits, vegetation indices (VIs), and temperature-related traits.
 
 The extracted data includes:
 
@@ -19,10 +19,10 @@ The extracted data includes:
 - **Hc/Wc** (Height-to-Width Ratio): A float representing the ratio between the maximum height (Hc) and width (Wc) of vegetation (optional), extracted only for woody crops.
 
 ### Vegetation Index (VI) Traits:
-- **vi**: A list of floats representing the calculated vegetation indices based on the specified options.
+- **VI**: A list of floats representing the calculated vegetation indices based on the specified options.
 
 ### Land Surface Temperature (LST) Traits:
-- **Tv** (Vegetation Temperature): A float representing the temperature of the vegetation (K).
+- **Tc** (Vegetation Temperature): A float representing the temperature of the vegetation (K).
 - **Trad** (Radiometric Temperature): A float representing the radiometric temperature (K).
 - **Ts** (Soil Temperature): A float representing the temperature of the soil (K). Included only if a soil mask is provided.
 - **Tvc** (Vegetation Cover Temperature): A float representing the temperature of the vegetation cover (K). Included only if a vegetation cover mask is provided.
