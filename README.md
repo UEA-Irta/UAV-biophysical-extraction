@@ -52,7 +52,7 @@ To use this project, ensure you have Python 3.x installed. Then, clone the repos
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/cesar-minuesa/uav-biophysical-extraction.git
+   git clone https://github.com/UEA-Irta/UAV-biophysical-extraction.git
 
 
 2. Install dependencies:
