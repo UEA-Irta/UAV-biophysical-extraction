@@ -89,7 +89,7 @@ This project requires the following Python libraries:
 
 1. **Structure Overview**: I added a project structure section to make it clear where each component fits in your project. You can adapt it depending on your actual file names and directories.
 2. **Installation**: The README describes how to set up the environment and install dependencies using Conda or pip.
-3. **Usage**: It provides an overview of how to use the main functions and mentions that detailed usage can be found in the `main.py` file.
+3. **Usage**: It provides an overview of how to use the main functions and mentions that detailed usage can be found in the `extraction.py` file.
 
 This `README.md` can be placed directly in your GitHub repository, and it will help users understand the purpose of the project, how to set it up, and how to use it.
 
