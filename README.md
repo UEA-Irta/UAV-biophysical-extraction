@@ -80,6 +80,7 @@ This project requires the following Python libraries:
 
 ## Main Scientific References
 
+- C.Minuesa, M. Quintanilla-Albornoz, J. Gené-Mola, A. Pelechá, L. Aparicio, J.Bellvert. 2025. Machine learning for leaf area index estimation in almond orchards using UAV multispectral and point-cloud data. 15th European Conference on Precision Agriculture - ECPA'25. Barcelona, Spain. 29 june - 3 july 2025. Submitted
 - Gao, R., Torres-Rua, A., Aboutalebi, M., White, W., Anderson, M., Kustas, W., Agam, N., Alsina, M., Alfieri, J., Hipps, L., Dokoozlian, N., Nieto, H., Gao, F., McKee, L., Prueger, J., Sanchez, L., Mcelrone, A., Bambach-Ortiz, N., Coopmans, C., and Gowing, I.: LAI estimation across California vineyards using sUAS multi-seasonal multi-spectral, thermal, and elevation information and machine learning, Irrigation Sci., 40, 731–759, https://doi.org/10.1007/s00271-022-00776-0, 2022. 
 - Quintanilla-Albornoz, M., Miarnau, X., Pelechá, A., Casadesús, J., García-Tejera, O., and Bellvert, J.: Evaluation of transpiration in different almond production systems with two-source energy balance models from UAV thermal and multispectral imagery, Irrigation Sci., https://doi.org/10.1007/s00271-023-00888-1, 2023. 
 
