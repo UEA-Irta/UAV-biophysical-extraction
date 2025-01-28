@@ -213,7 +213,7 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
         else:
             raise ValueError("statistics must contain either 'Hc_max' or 'Hc_mean'.")
 
-        cols_to_move = ['Fvc', 'Ac', 'Vc', 'Wc', 'Hc_Wc']
+        cols_to_move = ['Fvc', 'Ac', 'Vc', 'Wc', 'Wc_Hc']
         other_cols = [col for col in grid_dataset.columns if col not in cols_to_move]
         origin_cols = [col for col in grid_data.columns if col not in cols_to_move]
         cols_dif = list(set(other_cols) - set(origin_cols))
