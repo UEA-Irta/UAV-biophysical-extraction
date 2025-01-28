@@ -92,8 +92,8 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
                 Vegetation volume (m³).
             - Wc : float, optional
                 Vegetation width (m). Includes all calculated statistics. Extracted only for woody crops.
-            - Hc/Wc : float, optional
-                The ratio between maximum height (hc) and width (wc) (m/m). Extracted only for woody crops.
+            - Wc/Hc : float, optional
+                The ratio between width (wc) and height (hc) (m/m). Extracted only for woody crops.
 
     VI_traits :
             - vi : list of floats
@@ -209,7 +209,7 @@ def zonalstats_processing(general_params, structure_params, VI_params, LST_param
             hc_column = 'Hc_max' if 'Hc_max' in grid_dataset.columns else 'Hc_mean'
             grid_dataset['Vc'] = grid_dataset[hc_column] * grid_dataset['Ac']
             hc_column = 'Hc_mean' if 'Hc_mean' in grid_dataset.columns else 'Hc_max'
-            grid_dataset['Hc_Wc'] = grid_dataset[hc_column] / grid_dataset['Wc']
+            grid_dataset['Wc_Hc'] = grid_dataset['Wc'] / grid_dataset[hc_column]
         else:
             raise ValueError("statistics must contain either 'Hc_max' or 'Hc_mean'.")
 
