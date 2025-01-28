@@ -16,7 +16,7 @@ The extracted data includes:
 - **Ac** (Vegetation Zenithal Area): A float representing the zenithal area of the vegetation in square meters.
 - **Vc** (Vegetation Volume): A float representing the vegetation volume in cubic meters.
 - **Wc** (Vegetation Width): A float representing the vegetation width in meters, with statistics. Extracted only for woody crops.
-- **Hc/Wc** (Height-to-Width Ratio): A float representing the ratio between the maximum height (Hc) and width (Wc) of vegetation (optional), extracted only for woody crops.
+1. - **Wc/Hc** (Height-to-Width Ratio): A float representing the ratio between the width (Wc) and the height (Hc) of vegetation (optional), extracted only for woody crops.
 
 ### Vegetation Index (VI) Traits:
 - **VI**: A list of floats representing the calculated vegetation indices based on the specified options.
